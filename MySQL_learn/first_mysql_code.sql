@@ -36,4 +36,32 @@ VALUES
 ('Vikram Patel', 'Surat', 'Mixer Grinder', 'Appliances', 1, 4200, 5, '2025-02-03', '2025-02-06', 'UPI', 'Delivered', 4),
 ('Pooja Nair', 'Chennai', 'Yoga Mat', 'Fitness', 2, 1200, 0, '2025-02-05', '2025-02-07', 'Cash', 'Delivered', 5);
 
-SELECT * FROM orders;
+SELECT customer_name , city , rating FROM orders WHERE discount_percent < 20 ;
+
+-- select * from orders ;
+
+-- SELECT customer_name, product, city
+-- FROM orders;
+
+SELECT *
+FROM orders
+WHERE city = 'Delhi' and 
+delivery_date IS NULL  ;
+
+SELECT *
+FROM orders
+WHERE delivery_date IS NULL;
+
+-- Using AND and OR  
+
+SELECT *
+FROM orders
+WHERE city = 'Delhi' AND order_status = 'Delivered';
+
+ --  DESC MEANS ORDER ME SET KARNA HAI 
+
+SELECT customer_name, order_date, price_per_unit
+FROM orders
+ORDER BY order_date DESC;
+
+
