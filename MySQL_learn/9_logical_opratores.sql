@@ -1,8 +1,8 @@
 DROP DATABASE IF EXISTS ecom;
 
 CREATE DATABASE ecom;
-USE ecom;
 
+USE ecom;
 
 -- IN is used to match a value against a list of values 
 

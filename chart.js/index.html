@@ -1,0 +1,43 @@
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Speed', 'Strength', 'Skill'],
+                datasets: [{
+                    label: 'Player',
+                    data: [80, 90, 70],
+                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
+                    borderColor: 'blue'
+                }]
+            }
+        }),
+        new Chart(ctx, {
+                options: {
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            min: 0,
+                            max: 100
+                        }
+                    }
+                },
+                type: 'radar',
+                data: {
+                    labels: ['Speed', 'Strength', 'Skill'],
+                    datasets: [{
+                        label: 'Player',
+                        data: [80, 90, 70],
+                        backgroundColor: 'rgba(0, 0, 255, 0.2)',
+                        borderColor: 'blue'
+                    }]
+                }
+            });;
+</script>
